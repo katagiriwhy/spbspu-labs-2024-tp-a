@@ -1,8 +1,8 @@
-#include <iostream>
 #include <algorithm>
-#include <vector>
-#include <limits>
+#include <iostream>
 #include <iterator>
+#include <limits>
+#include <vector>
 #include "dataStruct.hpp"
 
 int main()
@@ -13,11 +13,11 @@ int main()
   std::vector< DataStruct > res;
   while (!std::cin.eof())
   {
-    std::copy(input_it_t{std::cin}, input_it_t{}, std::back_inserter(res));
+    std::copy(input_it_t{ std::cin }, input_it_t{}, std::back_inserter(res));
     std::cin.clear();
     std::cin.ignore(std::numeric_limits< std::streamsize >::max(), '\n');
   }
   std::sort(res.begin(), res.end());
-  std::copy(res.cbegin(), res.cend(), output_it_t{std::cout, "\n"});
+  std::copy(res.cbegin(), res.cend(), output_it_t{ std::cout, "\n" });
   return 0;
 }

@@ -1,6 +1,6 @@
 #include "dataStruct.hpp"
-#include <iostream>
 #include <bitset>
+#include <iostream>
 #include "delimiter.hpp"
 #include "inputKeys.hpp"
 
@@ -67,7 +67,8 @@ std::ostream& novokhatskiy::operator<<(std::ostream& out, const DataStruct& data
   {
     return out;
   }
-  out << "(:key1 " << "0b" << (data.key1 == 0 ? "" : "0") << data.key1;
+  out << "(:key1 "
+      << "0b" << (data.key1 == 0 ? "" : "0") << data.key1;
   out << ":key2 (:N " << data.key2.first << ":D " << data.key2.second << ":)";
   out << ":key3 " << '"' << data.key3 << '"' << ":)";
   return out;
